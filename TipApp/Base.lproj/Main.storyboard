@@ -34,7 +34,7 @@
                                 <rect key="frame" x="82" y="764" width="250" height="58"/>
                                 <color key="backgroundColor" red="0.60114528815974444" green="0.97680455450000003" blue="0.69872278891110307" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="250" id="uf9-4N-bSx"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="uf9-4N-bSx"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
                                 <state key="normal" title="Подсчитать">
@@ -47,23 +47,35 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSe-nT-cOD">
                                         <rect key="frame" x="0.0" y="0.0" width="61" height="63"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <color key="tintColor" red="0.48810078600000001" green="0.49094889549999998" blue="0.98106676339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="0%">
                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kvL-hY-5yR"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cAi-df-2K4">
                                         <rect key="frame" x="111" y="0.0" width="80" height="63"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <color key="tintColor" red="0.48810078600000001" green="0.49094889549999998" blue="0.98106676339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="10%">
                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZyT-RS-v6q"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXv-wa-A51">
                                         <rect key="frame" x="241" y="0.0" width="79" height="63"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="42"/>
+                                        <color key="tintColor" red="0.48810078600000001" green="0.49094889549999998" blue="0.98106676339999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="15%">
                                             <color key="titleColor" systemColor="systemGreenColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="buttonsPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="X8h-rZ-bqI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -90,6 +102,9 @@
                                     </label>
                                     <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="nhF-Cb-2DR">
                                         <rect key="frame" x="100.5" y="0.0" width="94" height="39.5"/>
+                                        <connections>
+                                            <action selector="stepperChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="VRt-pw-uID"/>
+                                        </connections>
                                     </stepper>
                                 </subviews>
                                 <constraints>
@@ -118,6 +133,14 @@
                             <constraint firstItem="etr-aT-5g2" firstAttribute="top" secondItem="f3n-Go-hK5" secondAttribute="bottom" constant="22" id="xLS-uR-xxf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="billTextField" destination="etr-aT-5g2" id="w0D-5J-IAd"/>
+                        <outlet property="fifteenButton" destination="JXv-wa-A51" id="QG5-Ky-sZU"/>
+                        <outlet property="peopleCountLabel" destination="z9t-Qb-8N0" id="IGI-jB-A0f"/>
+                        <outlet property="resultButton" destination="8QK-Hn-yWi" id="DcK-Be-5fR"/>
+                        <outlet property="tenButton" destination="cAi-df-2K4" id="O58-r2-H8a"/>
+                        <outlet property="zeroButton" destination="nSe-nT-cOD" id="Knd-fz-5Z5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
