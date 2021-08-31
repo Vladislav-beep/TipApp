@@ -19,7 +19,7 @@ class ViewController: UIViewController {
     @IBOutlet var resultButton: UIButton!
     
     var currentTip = 0.0
-    
+    var peopleCount = 2
     
     override func viewDidLoad() {
         
@@ -28,6 +28,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonsPressed(_ sender: UIButton) {
+        billTextField.endEditing(true )
         zeroButton.isSelected = false
         tenButton.isSelected = false
         fifteenButton.isSelected = false
@@ -36,10 +37,19 @@ class ViewController: UIViewController {
         let buttonTitle = String(sender.currentTitle!)
         let tip = Double(buttonTitle.dropLast())! / 100
         currentTip = tip
+        
     }
 
     @IBAction func stepperChanged(_ sender: UIStepper) {
         peopleCountLabel.text = String(format: "%.0f",sender.value)
+        peopleCount = Int(String(format: "%.0f",sender.value))!
     }
+    
+    @IBAction func resultButtonPressed(_ sender: UIButton) {
+        
+        let result: Double = Double(billTextField.text!)! * (1 + currentTip) / Double(peopleCount)
+    }
+    
+    
 }
 
