@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     
     var currentTip = 0.0
     var peopleCount = 2
+    var billTotal = ""
     
     override func viewDidLoad() {
         
@@ -28,7 +29,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func buttonsPressed(_ sender: UIButton) {
-        billTextField.endEditing(true )
+        billTextField.endEditing(true)
         zeroButton.isSelected = false
         tenButton.isSelected = false
         fifteenButton.isSelected = false
@@ -47,9 +48,19 @@ class ViewController: UIViewController {
     
     @IBAction func resultButtonPressed(_ sender: UIButton) {
         
-        let result: Double = Double(billTextField.text!)! * (1 + currentTip) / Double(peopleCount)
+        let result = String(Double(billTextField.text!)! * (1 + currentTip) / Double(peopleCount))
+        performSegue(withIdentifier: "goResult", sender: self)
+        
+        billTotal = result
     }
     
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "goResult" {
+            let destinationVC = segue.destination as! ResultViewController
+            destinationVC.resultLabelTitle = billTotal
+            
+        }
+    }
 }
 
