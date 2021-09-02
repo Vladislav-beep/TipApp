@@ -143,7 +143,7 @@
                         <outlet property="resultButton" destination="8QK-Hn-yWi" id="DcK-Be-5fR"/>
                         <outlet property="tenButton" destination="cAi-df-2K4" id="O58-r2-H8a"/>
                         <outlet property="zeroButton" destination="nSe-nT-cOD" id="Knd-fz-5Z5"/>
-                        <segue destination="yLO-3i-g57" kind="presentation" identifier="goResult" id="Xeg-x1-VIg"/>
+                        <segue destination="yLO-3i-g57" kind="presentation" identifier="goResult" modalPresentationStyle="fullScreen" id="Xeg-x1-VIg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -155,11 +155,11 @@
             <objects>
                 <viewController id="yLO-3i-g57" customClass="ResultViewController" customModule="TipApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ubT-Us-67w">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vW-ZV-PBh">
-                                <rect key="frame" x="61" y="92" width="292" height="35"/>
+                                <rect key="frame" x="61" y="136" width="292" height="35"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="292" id="eGO-bg-cbs"/>
                                 </constraints>
@@ -167,13 +167,13 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="На каждого человека" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KAr-2z-4RI">
-                                <rect key="frame" x="52" y="42" width="235" height="29"/>
+                                <rect key="frame" x="52" y="86" width="235" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" red="0.30840110780000002" green="0.5618229508" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEw-We-yB5">
-                                <rect key="frame" x="82" y="672" width="250" height="58"/>
+                                <rect key="frame" x="82" y="726" width="250" height="58"/>
                                 <color key="backgroundColor" red="0.60114528820000002" green="0.97680455450000003" blue="0.69872278889999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="250" id="5Vp-rn-rQ6"/>
