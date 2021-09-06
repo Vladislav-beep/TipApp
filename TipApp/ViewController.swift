@@ -26,8 +26,6 @@ class ViewController: UIViewController {
         
     }
 
-    
-    
     @IBAction func buttonsPressed(_ sender: UIButton) {
         billTextField.endEditing(true)
         zeroButton.isSelected = false
@@ -38,7 +36,6 @@ class ViewController: UIViewController {
         let buttonTitle = String(sender.currentTitle!)
         let tip = Double(buttonTitle.dropLast())! / 100
         currentTip = tip
-        
     }
 
     @IBAction func stepperChanged(_ sender: UIStepper) {
@@ -49,9 +46,8 @@ class ViewController: UIViewController {
     @IBAction func resultButtonPressed(_ sender: UIButton) {
         
         let result = String(Double(billTextField.text!)! * (1 + currentTip) / Double(peopleCount))
-        performSegue(withIdentifier: "goResult", sender: self)
-        
         billTotal = result
+        performSegue(withIdentifier: "goResult", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -59,7 +55,6 @@ class ViewController: UIViewController {
         if segue.identifier == "goResult" {
             let destinationVC = segue.destination as! ResultViewController
             destinationVC.resultLabelTitle = billTotal
-            
         }
     }
 }
